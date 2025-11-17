@@ -1,0 +1,77 @@
+############################
+# Java
+############################
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.tmp
+
+############################
+# Maven
+############################
+target/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/timing.properties
+
+############################
+# Spring Boot
+############################
+# Ignore application config if it contains credentials
+application.properties
+application.yml
+application-*.properties
+application-*.yml
+
+# Embedded server logs
+logs/
+*.log
+
+############################
+# OS generated files
+############################
+.DS_Store
+Thumbs.db
+
+############################
+# Eclipse / STS
+############################
+.project
+.classpath
+.settings/
+.springBeans
+.apt_generated/
+.factorypath
+
+############################
+# IntelliJ IDEA
+############################
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+############################
+# Build directories
+############################
+bin/
+build/
+
+############################
+# Temporary files
+############################
+*.swp
+*.swo
+
+############################
+# Lombok
+############################
+lombok.config
+
+############################
+# Git
+############################
+*.orig
+
