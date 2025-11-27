@@ -19,9 +19,8 @@ target/
 # Spring Boot
 ############################
 # Ignore application config if it contains credentials
-application.properties
+!src/main/resources/application.properties
 application.yml
-application-*.properties
 application-*.yml
 
 # Embedded server logs
