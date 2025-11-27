@@ -20,7 +20,6 @@ target/
 ############################
 # Ignore application config if it contains credentials
 application.yml
-application-*.properties
 application-*.yml
 
 # Embedded server logs
