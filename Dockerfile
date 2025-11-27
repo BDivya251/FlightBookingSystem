@@ -1,17 +1,13 @@
-# Use official OpenJDK image
-FROM eclipse-temurin:17-jdk-alpine
-
-# Set working directory
+# Step 1: Build the JAR
+FROM eclipse-temurin:17-jdk-alpine AS build
 WORKDIR /app
+COPY . .
+RUN ./mvnw clean package -DskipTests
 
-# Copy jar file to container
-COPY target/*.jar app.jar
-
-# Expose port (Render auto assigns a port)
-EXPOSE 8080
-
-# Use Render's PORT variable
+# Step 2: Run the application
+FROM eclipse-temurin:17-jdk-alpine
+WORKDIR /app
+COPY --from=build /app/target/FlightTicket-2-0.0.1-SNAPSHOT.jar app.jar
 ENV PORT 8080
-
-# Start the application
+EXPOSE 8080
 ENTRYPOINT ["sh", "-c", "java -jar app.jar --server.port=$PORT"]
