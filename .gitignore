@@ -19,7 +19,6 @@ target/
 # Spring Boot
 ############################
 # Ignore application config if it contains credentials
-application.properties
 application.yml
 application-*.properties
 application-*.yml
